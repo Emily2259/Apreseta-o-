@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil da Líder, Alunos e Questionários Aplicados</title>
+    <style>
+      /* Estilos básicos */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f6f6;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+      /* Estilos para os links */
+      .links .link-item {
+        margin: 8px 0;
+      }
+      .links .link-item a {
+        color: #007acc;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .links .link-item a:hover {
+        text-decoration: underline;
+      }
+      /* Quadrado para a imagem da líder com dimensões especificadas */
+      .imagem-quadrinho {
+        background-color: #000;
+        width: 12.46cm;
+        height: 9.34cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+      .imagem-quadrinho img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Bio da líder */
+      .bio {
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+      }
+      .bio p {
+        margin: 8px 0;
+      }
+      /* Perfis dos alunos e docente - sem imagens individuais */
+      .perfis-alunos .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .perfil-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1.1em;
+      }
+      /* Estilos para os questionários aplicados */
+      .questionario-aplicado form div {
+        margin-bottom: 15px;
+      }
+      .questionario-aplicado label {
+        font-weight: bold;
+      }
+      .questionario-aplicado textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      .questionario-aplicado button {
+        background-color: #007acc;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+      .questionario-aplicado button:hover {
+        background-color: #005f9e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container para Referências e Links -->
+    <div class="container links">
+      <h2>Referências e Links Úteis</h2>
+      <div class="link-item">
+        <a href="https://goo.su/3BElZG" target="_blank">
+          CHIARI, Marcela; SANTOS, Taynan Cristina dos. Perfil comportamental nas organizações: uma análise do
+          filme "O Diabo Veste Prada" pela perspectiva da ferramenta DISC (2024)
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="https://goo.su/Ez7bedI" target="_blank">
+          LUZ, Daniel; BAEZA, Mayara. DISC de A a Z: Tudo o que você precisa saber sobre como utilizar a mais popular
+          ferramenta de análise de perfil comportamental e estilo de trabalho. Literare Books (2025)
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="https://www.youtube.com/watch?v=MKNpsqc52NI" target="_blank">
+          CRESCIMENTO. 4 PERFIS COMPORTAMENTAIS para entender MELHOR SUA EQUIPE! (Acesso: 27 mar. 2025)
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="https://www.youtube.com/watch?v=wN4mYgw0XEA" target="_blank">
+          MANZANO, M. Os 4 perfis comportamentais que todo líder DEVE dominar. (Acesso: 27 mar. 2025)
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="https://www.mrcoach.com.br/teste-perfil-comportamental-disc.php" target="_blank">
+          COACH, M. Teste de Perfil Comportamental DISC. (Acesso: 28 mar. 2025)
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="https://play.google.com/store/apps/details?id=com.cingulo.app&pli=1" target="_blank">
+          CINGULO SA. Cingulo: Cura e Crescimento. Versão 5.20.0. Cingulo (30 mar. 2017 – Android 6.0)
+        </a>
+      </div>
+    </div>
+    
+    <!-- Container do Perfil da Líder -->
+    <div class="container perfil-lider">
+      <h2>Perfil da Líder</h2>
+      <div class="imagem-quadrinho">
+        <img src="foto da lider.jpg" alt="Imagem da Líder" />
+      </div>
+      <div class="bio">
+        <p><strong>Nome:</strong> Viviane Aparecida Santos de Oliveira (Líder)</p>
+        <p><strong>Idade:</strong> 36 anos</p>
+        <p><strong>Estado Civil:</strong> Casada</p>
+        <p><strong>Filhos:</strong> 02 filhos</p>
+        <p>
+          Viviane Aparecida Santos de Oliveira construiu uma trajetória notável e inspiradora no mundo dos negócios. Aos 36 anos, já casada e mãe de dois filhos, ela revolucionou o Pastel da Juju ao inovar no setor de pastelarias. Em 2020, ela tomou uma decisão ousada ao romper uma sociedade anterior e transformar um simples trailer em uma pastelaria moderna e acolhedora.
+        </p>
+        <p>
+          Com uma liderança que une sensibilidade e firmeza, Viviane participa ativamente de cada etapa do processo — da confecção dos pastéis à venda final —, liderando uma equipe de oito funcionários com criatividade e determinação. Sua visão empreendedora lhe permite converter desafios em oportunidades, motivando sua equipe a perseguir a excelência em cada detalhe.
+        </p>
+        <p>
+          Complementando o sucesso da administração, seu esposo cuida da parte financeira do negócio, criando um equilíbrio que fortalece todo o empreendimento. A história de Viviane é um vibrante exemplo de resiliência e paixão, demonstrando que, com coragem e dedicação, é possível transformar sonhos em realidade.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Container dos Perfis dos Alunos e Docente -->
+    <div class="container perfis-alunos">
+      <h2>Perfis dos Alunos e Docente</h2>
+      <div class="grid">
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Adrielly Nayara Barbosa</p>
+          <p><strong>Curso:</strong> Ciências Contábeis</p>
+          <p><strong>Matrícula:</strong> 202502279371</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Ana Ligia Noemi Dourado de Oliveira</p>
+          <p><strong>Curso:</strong> Ciências Contábeis</p>
+          <p><strong>Matrícula:</strong> 202502214928</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Emily Prado Pereira Silva</p>
+          <p><strong>Curso:</strong> Ciências Contábeis</p>
+          <p><strong>Matrícula:</strong> 202502314256</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Flávia Regina Paulista Santana</p>
+          <p><strong>Curso:</strong> Administração</p>
+          <p><strong>Matrícula:</strong> 202502365969</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Fabrício Santos de Marins</p>
+          <p><strong>Curso:</strong> Logística</p>
+          <p><strong>Matrícula:</strong> 202502410484</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> João Henrique da Silva Santos</p>
+          <p><strong>Curso:</strong> Logística</p>
+          <p><strong>Matrícula:</strong> 202502380674</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Vinícius Miguel Bisco</p>
+          <p><strong>Curso:</strong> Logística</p>
+          <p><strong>Matrícula:</strong> 202504027891</p>
+        </div>
+        <div class="perfil-card">
+          <p><strong>Nome:</strong> Alessandra Camargo</p>
+          <p><strong>Curso:</strong> Docente</p>
+          <p><strong>Matrícula:</strong> -</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Container de Questionários Aplicados -->
+    <div class="container questionario-aplicado">
+      <h2>Questionários Aplicados - Teste de Perfil Comportamental</h2>
+      <form id="questionarioAplicadoForm">
+        <div>
+          <label for="quest1">1. Qual seria um ponto fraco que você acha que deveria melhorar?</label>
+          <textarea id="quest1" name="quest1" rows="3" placeholder="É preciso melhorar a Forma de Liderar os funcionários."></textarea>
+        </div>
+        <div>
+          <label for="quest2">2. Alguma oportunidade que gostaria de ter e ainda não deu andamento nisso?</label>
+          <textarea id="quest2" name="quest2" rows="3" placeholder="Ter um controle Melhor na Gestão da Empresa."></textarea>
+        </div>
+        <div>
+          <label for="quest3">3. O que é difícil na liderança?</label>
+          <textarea id="quest3" name="quest3" rows="3" placeholder="Fazer com que os Colaboradores faça Exatamente com a Forma que foi orientado."></textarea>
+        </div>
+        <div>
+          <label for="quest4">4. Quais valores são importantes para você como líder?</label>
+          <textarea id="quest4" name="quest4" rows="3" placeholder="Respeito e empatia."></textarea>
+        </div>
+        <div>
+          <label for="quest5">5. Como você garante que sua equipe esteja comprometida com os projetos?</label>
+          <textarea id="quest5" name="quest5" rows="3" placeholder="É preciso estar sempre Observando."></textarea>
+        </div>
+        <div>
+          <label for="quest6">6. Qual é sua melhor habilidade de liderança?</label>
+          <textarea id="quest6" name="quest6" rows="3" placeholder="A paciência."></textarea>
+        </div>
+        <div>
+          <label for="quest7">7. Com que frequência você se reúne com sua equipe?</label>
+          <textarea id="quest7" name="quest7" rows="3" placeholder="Somente quando é um assunto muito sério, Reuniões é Poucas Vezes."></textarea>
+        </div>
+        <div>
+          <label for="quest8">8. Quais fatores o motivam como líder?</label>
+          <textarea id="quest8" name="quest8" rows="3" placeholder="Desejo que a Empresa cresça muito."></textarea>
+        </div>
+        <div>
+          <label for="quest9">9. A equipe compreende sua necessidade de obter informações?</label>
+          <textarea id="quest9" name="quest9" rows="3" placeholder="As Vezes Não."></textarea>
+        </div>
+        <div>
+          <label for="quest10">10. Como você lida com a pressão e o estresse no ambiente de trabalho?</label>
+          <textarea id="quest10" name="quest10" rows="3" placeholder="Eu entendo que sempre haverá questões a serem resolvidas é melhor manter a calma."></textarea>
+        </div>
+       
+      </form>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questionário e Análise Cíngulo</title>
+  <style>
+    /* Reset básico */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #333;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #444;
+      text-align: center;
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Container genérico */
+    .container {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Seção de referência */
+    .reference p {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+    .reference a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .reference a:hover {
+      text-decoration: underline;
+    }
+
+    /* Análise Completa */
+    .analysis p {
+      margin-bottom: 12px;
+    }
+
+    /* Quadros Antes e Depois */
+    .before-after .analysis-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .analysis-box {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .analysis-box img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .analysis-box p {
+      font-size: 0.95em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questionário, Análise Cíngulo e Gráfico de Traços de Personalidade</title>
+  <style>
+    /* Reset Básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      padding: 20px;
+      color: #333;
+      line-height: 1.5;
+    }
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    h3 {
+      font-size: 1.1em;
+      color: #555;
+    }
+    .container {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    /* Seção: Referências */
+    .reference p {
+      margin-bottom: 12px;
+      font-size: 0.95em;
+    }
+    .reference a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .reference a:hover {
+      text-decoration: underline;
+    }
+    /* Seção: Análise Completa */
+    .analysis p {
+      margin-bottom: 12px;
+      font-size: 0.95em;
+    }
+    /* Seção: Gráfico de Traços de Personalidade */
+    .graph-section {
+      margin-top: 40px;
+    }
+    .bar {
+      margin-bottom: 15px;
+    }
+    .bar .label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .progress {
+      background-color: #ddd;
+      border-radius: 4px;
+      height: 25px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress .progress-bar {
+      height: 100%;
+      border-radius: 4px;
+      line-height: 25px;
+      color: #fff;
+      text-align: right;
+      padding-right: 5px;
+      white-space: nowrap;
+    }
+    /* Cores para os traços */
+    .bar.orange .progress-bar {
+      background-color: #FFA500;
+    }
+    .bar.green .progress-bar {
+      background-color: #4CAF50;
+    }
+    /* Seção: Depois */
+    .post-analysis {
+      margin-top: 40px;
+    }
+    .post-analysis p {
+      font-size: 0.95em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .post-analysis ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    .post-analysis li {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+      text-align: left;
+    }
+    .post-analysis h3 {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção de Referências -->
+  <section class="container reference">
+    <h2>Referências</h2>
+    <p>
+      CINGULO SA. Cingulo: Cura e Crescimento. Versão 5.20.0. Cingulo, 30 mar. 2017. Android 6.0.
+      Disponível em:
+      <a href="https://play.google.com/store/apps/details?id=com.cingulo.app&pli=1" target="_blank">
+        https://play.google.com/store/apps/details?id=com.cingulo.app&pli=1
+      </a>.
+      Acesso em: 11 abr. 2025.
+    </p>
+    <p>
+      Fonte das perguntas:
+      <a href="https://play.google.com/store/apps/details?id=com.cingulo.app&pli=1" target="_blank">
+        Teste de Perfil Comportamental DISC (MrCoach)
+      </a>.
+    </p>
+  </section>
+
+  <!-- Seção de Análise Completa -->
+  <section class="container analysis">
+    <h2>Análise Completa</h2>
+    <p>
+      Você tem momentos de desânimo e insegurança, assim como dúvidas sobre a sua capacidade e seu valor.
+      Sua curiosidade e motivação só são despertadas por atividades realmente interessantes, mas consegue ter prazer com elas.
+      Sua tendência é de desistir de objetivos quando encontra barreiras. Melhorar a autoestima será bem importante para o seu bem‐estar.
+    </p>
+    <p>
+      Você tem alguma dificuldade em relaxar e deixar suas preocupações de lado. Quando momentos importantes estão por acontecer,
+      seu nível de apreensão gera desconforto, mas raramente atrapalha seu rendimento. Algumas vezes você quer controlar coisas que
+      poderiam fluir naturalmente, gerando tensões que poderiam ser evitadas.
+    </p>
+    <p>
+      Sua vulnerabilidade ao estresse pode afetar seu desempenho em ocasiões de maior pressão. Após conflitos fortes com pessoas,
+      você fica um bom tempo remoendo o ocorrido. Seu perfil aponta tendência a se culpar mais do que necessário, além de não lidar
+      bem com rejeição, indiferença e a possibilidade de abandono. Fortalecer autoestima e resiliência ajudará a melhorar esses aspectos.
+    </p>
+    <p>
+      Seu grau de inibição é suficiente para se resguardar em novos ambientes, mas você tende a se soltar à medida que se familiariza com eles.
+      Suas preocupações são pontuais, mas suficientes para evitar riscos excessivos. Sua natureza é tranquila, pacífica e ponderada,
+      o que ajuda no convívio. Quando contrariada, sua irritação é momentânea e bem controlada. Sua paciência auxilia a esperar o momento
+      certo para agir.
+    </p>
+    <p>
+      Uma certa oscilação de humor pode atrapalhar conquistas pessoais que demandam constância. Algumas relações podem se desgastar
+      por conta de reações mais dramáticas, mas isso também pode ser visto como um “tempero” da sua personalidade.
+    </p>
+    <p>
+      A tendência de agir sem pensar pode gerar consequências negativas ou situações constrangedoras. Há momentos em que não
+      antecipa problemas, o que te deixa despreparada caso eles ocorram.
+    </p>
+    <p>
+      Você tem dificuldade de concentração, planejamento, organização ou atenção a detalhes, o que afeta tarefas repetitivas.
+      Atividades com propósito claro facilitam seu engajamento “de corpo e alma”.
+    </p>
+    <p>
+      Você resiste a assumir erros e nem sempre age de forma proativa para resolver problemas. Quando “foge da raia” ou finge que
+      nada aconteceu, perde oportunidades de aprendizado e evolução.
+    </p>
+    <p>
+      Sua necessidade de saciar desejos é moderada, mas às vezes você exagera em áreas como compras, sexo, drogas ou comida.
+      Depois, pode surgir arrependimento.
+    </p>
+    <p>
+      Parabéns por ter sido sincera consigo mesma e conquistado mais consciência sobre suas características.
+      Investir no autoconhecimento traz enormes benefícios pessoais. Se você realmente quiser evoluir, usar o Cíngulo pode ajudar
+      muito: basta seguir em frente na sua trilha personalizada de sessões.
+    </p>
+  </section>
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gráficos de Traços de Personalidade - Antes e Depois</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    /* Container dos gráficos */
+    .container {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .graph-section {
+      margin-bottom: 40px;
+    }
+    .graph-section h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #555;
+      font-size: 1.2em;
+    }
+    .subsection {
+      margin-bottom: 20px;
+    }
+    .subsection h4 {
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .bar {
+      margin-bottom: 10px;
+    }
+    .label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .progress {
+      background: #ddd;
+      border-radius: 4px;
+      height: 25px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    .progress-bar {
+      height: 25px;
+      line-height: 25px;
+      color: #fff;
+      padding-right: 5px;
+      white-space: nowrap;
+      border-radius: 4px;
+    }
+    .orange {
+      background-color: #FFA500;
+    }
+    .green {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Gráficos de Traços de Personalidade: Antes e Depois</h2>
+  
+  <!-- Gráfico "Antes" -->
+  <div class="container">
+    <div class="graph-section">
+      <h3>Antes</h3>
+      <!-- Seção de Traços Favoráveis -->
+      <div class="subsection">
+        <h4>Traços Favoráveis (Quanto mais, melhor)</h4>
+        <div class="bar">
+          <div class="label">Vontade (60%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 60%;">60%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Estabilidade (70%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Cautela (80%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Atenção (50%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 50%;">50%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Atitude (50%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 50%;">50%</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Seção de Traços Prejudiciais -->
+      <div class="subsection">
+        <h4>Traços Prejudiciais (Quanto mais, pior)</h4>
+        <div class="bar">
+          <div class="label">Ansiedade (60%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 60%;">60%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Sensibilidade (70%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Medo (80%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Raiva (50%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 50%;">50%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Impulsos (20%)</div>
+          <div class="progress">
+            <div class="progress-bar green" style="width: 20%;">20%</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Gráfico "Depois" -->
+  <div class="container">
+    <div class="graph-section">
+      <h3>Depois</h3>
+      <!-- Seção de Traços Favoráveis -->
+      <div class="subsection">
+        <h4>Traços Favoráveis (Quanto mais, melhor)</h4>
+        <div class="bar">
+          <div class="label">Vontade (70%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Estabilidade (80%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Cautela (90%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 90%;">90%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Atenção (60%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 60%;">60%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Atitude (60%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 60%;">60%</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Seção de Traços Prejudiciais -->
+      <div class="subsection">
+        <h4>Traços Prejudiciais (Quanto mais, pior)</h4>
+        <div class="bar">
+          <div class="label">Ansiedade (50%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 50%;">50%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Sensibilidade (60%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 60%;">60%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Medo (70%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Raiva (40%)</div>
+          <div class="progress">
+            <div class="progress-bar orange" style="width: 40%;">40%</div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="label">Impulsos (10%)</div>
+          <div class="progress">
+            <div class="progress-bar green" style="width: 10%;">10%</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</body>
+</html>
